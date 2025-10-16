@@ -1,0 +1,20 @@
+{
+  "name": "git-commit-generator",
+  "version": "1.0.0",
+  "description": "A small local tool that generates conventional commit messages from diffs or a short description.",
+  "main": "git-commit-generator/server/index.js",
+  "scripts": {
+    "start": "node git-commit-generator/server/index.js",
+    "dev": "nodemon git-commit-generator/server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

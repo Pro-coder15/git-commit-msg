@@ -1,20 +1,37 @@
 {
   "name": "git-commit-generator",
   "version": "1.0.0",
-  "description": "A small local tool that generates conventional commit messages from diffs or a short description.",
-  "main": "git-commit-generator/server/index.js",
+  "description": "Professional Commit Message Generator powered by Gemini API",
+  "main": "server/index.js",
   "scripts": {
-    "start": "node git-commit-generator/server/index.js",
-    "dev": "nodemon git-commit-generator/server/index.js"
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "git",
+    "commit",
+    "generator",
+    "gemini"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.3",
-    "express": "^4.19.2"
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "path": "^0.12.7"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.4"
   }
 }
+```
+**The crucial change is `node server/index.js`** (removing the `git-commit-generator/` prefix).
+
+### 2. Commit and Push the Fix
+
+Now, send this fix to GitHub so Render can pull the updated instructions.
+
+```bash
+git add package.json
+git commit -m "fix(deploy): Correct node start path in package.json for Render"
+git push -u origin main
